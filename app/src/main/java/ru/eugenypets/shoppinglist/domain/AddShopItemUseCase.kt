@@ -1,12 +1,13 @@
 package ru.eugenypets.shoppinglist.domain
 
 // InterActor (UseCase) - класс который отвечает за одно действие бизнес-логики
+// InterActor (UseCase) - одна операция бизнес-логики, которую может вызвать пользователь
 
-class AddShopItemUseCase {
+class AddShopItemUseCase(private val shopListRepository: ShopListRepository) {
 
     // добавить элемент списка
     fun addShopItem(shopItem: ShopItem) {
-        TODO()
-
+        // реализация через метод интерфейса ShopListRepository
+        shopListRepository.addShopItem(shopItem)
     }
 }
