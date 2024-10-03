@@ -6,7 +6,7 @@ class GetShopItemUseCase(private val shopListRepository: ShopListRepository) {
     // получить элемент списка
     fun getShopItem(shopItemId: Int): ShopItem {
 
-        return shopListRepository.GetShopItem(shopItemId)
+        return shopListRepository.getShopItem(shopItemId)
 
     }
 }
